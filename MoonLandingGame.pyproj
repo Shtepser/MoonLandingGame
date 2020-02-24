@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ba6c8ae7-8b8d-444a-9019-0f296ee37fdf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>MoonLandingGame.py</StartupFile>
+    <StartupFile>moon_landing.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>MoonLandingGame</Name>
     <RootNamespace>MoonLandingGame</RootNamespace>
+    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MoonLandingGame.py" />
+    <Compile Include="landing_ship.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="moon_landing.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.7" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
