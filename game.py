@@ -11,9 +11,16 @@ class Game:
 
     def ask_fuel(self):
         while True:
-            request = float(input("Сколько процентов топлива вы хотите использовать?\n> "))
+            try:
+                request = float(input("Сколько процентов топлива вы хотите использовать?\n> "))
+            except ValueError:
+                print("Вы ввели некорректное значение, попробуйте ещё раз")
+                continue
             if request >= self.ship.fuel:
                 print("Невозможно! В баках осталось только {round(self.ship.fuel, 2)}% топлива")
+                continue
+            if request < 0:
+                print("Невозможно! Двигатели работают только на торможение")
                 continue
             return request
 
