@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ba6c8ae7-8b8d-444a-9019-0f296ee37fdf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>moon_landing.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -12,6 +12,10 @@
     <Name>MoonLandingGame</Name>
     <RootNamespace>MoonLandingGame</RootNamespace>
     <InterpreterId>Global|PythonCore|3.7</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <DebugStdLib>False</DebugStdLib>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,7 +29,10 @@
     <Compile Include="landing_ship.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="moon_landing.py" />
+    <Compile Include="game.py" />
+    <Compile Include="main.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.7" />
