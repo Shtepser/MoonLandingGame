@@ -24,5 +24,5 @@ class LandingShip(object):
         self.speed -= GRAVITY * SHIP_WEIGHT
 
     def run_engine(self, fuel):
-        self.speed += ENGINE_POWER * min(fuel, self.fuel)
+        self.speed += ENGINE_POWER * fuel
         self.fuel -= fuel
