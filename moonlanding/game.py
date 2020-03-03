@@ -1,4 +1,4 @@
-from landing_ship import LandingShip
+from moonlanding.landing_ship import LandingShip
 
 
 class Game:
