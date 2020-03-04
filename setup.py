@@ -13,6 +13,11 @@ config = {
     'install_requires': ['nose'],
     'packages': ['moonlanding'],
     'scripts': [],
+    'entry_points': {
+        "console_scripts": [
+            "game = moonlanding.main:main"
+        ]
+    },
     'name': 'Moon Landing'
 }
 

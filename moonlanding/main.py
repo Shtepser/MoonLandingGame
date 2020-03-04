@@ -1,5 +1,10 @@
 from moonlanding.game import Game
 
-if __name__ == "__main__":
+
+def main():
     game = Game(height=5)
     game.play()
+
+
+if __name__ == "__main__":
+    main()
