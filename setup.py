@@ -15,10 +15,10 @@ config = {
     'scripts': [],
     'entry_points': {
         "console_scripts": [
-            "game = moonlanding.main:main"
+            "run_game = moonlanding.main:main"
         ]
     },
-    'name': 'Moon Landing'
+    'name': 'MoonLanding'
 }
 
 setup(**config)
