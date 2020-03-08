@@ -5,9 +5,9 @@ class Game:
 
     SAFE_SPEED = 5
 
-    def __init__(self, ship_weight, height):
+    def __init__(self, ship_engine_power, ship_weight, height):
         self.start_height = height
-        self.ship = LandingShip(ship_weight, self.start_height)
+        self.ship = LandingShip(ship_weight, ship_engine_power, self.start_height)
 
     def ask_fuel(self):
         while True:
