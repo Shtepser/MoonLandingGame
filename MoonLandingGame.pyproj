@@ -37,6 +37,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="setup.py" />
+    <Compile Include="tests\landing_ship_tests.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\moonlanding_tests.py" />
     <Compile Include="tests\__init__.py">
       <SubType>Code</SubType>
     </Compile>
