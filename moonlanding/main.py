@@ -2,7 +2,7 @@ from moonlanding.game import Game
 
 
 def main():
-    game = Game(height=5)
+    game = Game(ship_weight=5, height=5)
     game.play()
 
 
