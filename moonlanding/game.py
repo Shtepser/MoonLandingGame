@@ -16,7 +16,7 @@ class Game:
             except ValueError:
                 print("Вы ввели некорректное значение, попробуйте ещё раз")
                 continue
-            if request >= self.ship.fuel:
+            if request >= self.ship.fuel_tank.percents_left:
                 print("Невозможно! В баках осталось только {round(self.ship.fuel, 2)}% топлива")
                 continue
             if request < 0:
