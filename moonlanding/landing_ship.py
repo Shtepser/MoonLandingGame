@@ -10,14 +10,14 @@ class LandingShip(object):
         self.weight = weight
         self.engine_power = engine_power
         self.height = start_height
-        self.fuel = 100
+        self.fuel_tank = FuelTank()
         self.speed = 0
 
     def get_status(self):
         return dedent(f"""\
         Высота: {round(self.height, 2)}
         Вертикальная скорость: {round(self.speed, 2)} м/с
-        Осталось {round(self.fuel, 2)}% топлива""")
+        Осталось {round(self.fuel_tank.percents_left, 2)}% топлива""")
 
     def move(self):
         self.speed -= GRAVITY * self.weight
@@ -26,5 +26,15 @@ class LandingShip(object):
     def run_engine(self, fuel):
         if fuel < 0:
             raise ValueError("Fuel can't be negative!")
-        self.speed += self.engine_power * min(fuel, self.fuel)
-        self.fuel -= min(fuel, self.fuel)
+        self.speed += self.engine_power * self.fuel_tank.use_fuel(fuel)
+
+
+class FuelTank:
+
+    def __init__(self):
+        self.percents_left = 100
+    
+    def use_fuel(self, percents):
+        can_use = min(percents, self.percents_left)
+        self.percents_left -= can_use
+        return can_use

@@ -4,19 +4,19 @@ from moonlanding.landing_ship import LandingShip, GRAVITY
 
 def test_ship():
     ship = LandingShip(0, 0, 0)
-    assert_equal(ship.fuel, 100)
+    assert_equal(ship.fuel_tank.percents_left, 100)
     assert_equal(ship.speed, 0)
 
 
 def test_fuel():
     ship = LandingShip(0, 0, 0)
-    assert_equal(ship.fuel, 100)
+    assert_equal(ship.fuel_tank.percents_left, 100)
     ship.run_engine(20)
-    assert_equal(ship.fuel, 80)
+    assert_equal(ship.fuel_tank.percents_left, 80)
     ship.run_engine(80)
-    assert_equal(ship.fuel, 0)
+    assert_equal(ship.fuel_tank.percents_left, 0)
     ship.run_engine(20)
-    assert_equal(ship.fuel, 0)
+    assert_equal(ship.fuel_tank.percents_left, 0)
     try:
        ship.run_engine(-20)
     except ValueError as e:
